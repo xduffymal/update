@@ -1,0 +1,26 @@
+# Demo and integration test cases
+
+Use a disposable demo workspace. Fill in actual result, pass/fail, execution time and screenshot/evidence filename when running these cases on the demo computer.
+
+| ID | Feature | Steps | Expected behavior | Existing evidence |
+| --- | --- | --- | --- | --- |
+| DEMO-01 | Startup and login | Run Start-Demo.cmd, choose a password, open /lab/, sign in. | Dashboard opens with an available email model. Original database files remain unchanged. | Fresh helper + HTTP checks; native browser login still manual. |
+| DEMO-02 | Data origin | Open documentation/teacher-data/START_HERE.html and the Excel review file. | Enron/Nazario websites and 1,992 source-matched records are visible. | Teacher package verification. |
+| DEMO-03 | Load and divide | In Data Collection import a permitted CSV, save it, divide with seed 42. | Saved split contains both labels and no duplicate content across partitions. | Automated CSV/split tests. |
+| DEMO-04 | Traditional training | Train Logistic Regression, Naive Bayes, Linear SVM and Random Forest on one saved split. | Completed run with saved pipelines, metrics and confusion matrices. | Fresh seven-model acceptance + automated workflow tests. |
+| DEMO-05 | Neural options | Select compatible LSTM, BERT or CTI-BERT mode and train. | Completed serialized model reloads and predicts. It may take longer than TF-IDF. | Fresh model verification for all three. |
+| DEMO-06 | Deploy and rollback | Select a version in Model Management, deploy, then roll back after a second deployment. | Active and previous versions change as requested. | Automated deployment/rollback tests. |
+| DEMO-07 | Preprocessing page | Open saved real comparison 2da5a01de1e34b3a9fe930290773fd28. | HTTP 200, seven method rows and training-only feature correlations. | Fresh route checks, corrected preprocessing tests. |
+| DEMO-08 | Pasted email scanner | Paste demo_inputs/phishing_like.txt in Analyze Email. | Scan persists and learned model is available. Expect phishing-like evidence with the supplied deployed version. | Fresh scanner and HTTP JSON, not independent accuracy validation. |
+| DEMO-09 | Legitimate example | Scan demo_inputs/legitimate_meeting.txt. | Scan persists with model prediction and evidence. Record actual risk and confidence. | Fresh model smoke test. |
+| DEMO-10 | URL mismatch | Upload demo_inputs/link_mismatch.eml. | Evidence reports the displayed link/destination mismatch without visiting the destination. | Automated URL mismatch test. |
+| DEMO-11 | Attachment warning | Upload demo_inputs/attachment_warning.eml. | Inert invoice.pdf.exe attachment receives hash/signature/extension warnings. | Automated attachment tests. No real executable is included. |
+| DEMO-12 | Batch scanning | Upload the two demo TXT files together. | Two results and a saved batch/history record. | Fresh two-file HTTP batch + automated tests. |
+| DEMO-13 | MSG/MBOX parsing | Use official tmp/msg-fixtures/unicode.msg and a permitted MBOX fixture. | Parsed message content and batch results, without persistent temporary MSG files. | Fresh automated real-MSG and MBOX parser tests. |
+| DEMO-14 | Export | Export CSV and PDF from a saved scan. | Downloads are nonempty and PDF opens. Inspect text/layout on the demo computer. | Fresh HTTP 200 and PDF signature, automated export coverage. |
+| DEMO-15 | Feedback approval | Submit sanitized feedback, review it as an authorized reviewer. | Pending feedback requires approval before training-dataset inclusion. | Automated workflow tests. |
+| DEMO-16 | Role restrictions and CSRF | Use analyst role to try administrator actions. Submit a form without a valid token. | Unauthorized action is rejected and invalid token returns HTTP 400. | Automated RBAC/CSRF/last-admin tests. |
+| DEMO-17 | Independent validation | Use records designated independent validation and evaluate trained versions. | Metrics save without fitting or changing deployment. Overlapping records are rejected. | Automated independent-validation tests; prior real-source evidence is historical. |
+| DEMO-18 | Synthetic category demonstration | Open or generate the 96-record separate category demo. | 72/24 grouped split, synthetic notice, category prediction. No real malware-detection claim. | Fresh preprocessing tests + saved synthetic run. |
+| DEMO-19 | Retention and preservation | In a disposable demo database, apply an explicit retention policy. | Recoverable snapshot exists and user/model data remain. | Automated retention test. Do not perform destructive tests on the original databases. |
+| DEMO-20 | External threat sources | Shortly before demo, collect a few NVD, MITRE ATT&CK and OpenPhish records. | Record actual success/error and source availability. | Manual retest pending; historical live evidence only. |

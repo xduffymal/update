@@ -1,0 +1,360 @@
+{
+    "status": "trained",
+    "dataset_strategy": "Labels are derived from authoritative source categories (NVD/CISA KEV=vulnerability, MITRE ATT&CK=attack_technique, OpenPhish=phishing) with analyst-reviewed corrections taking priority.",
+    "best_model": "Logistic Regression",
+    "best_accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1_score": 1.0,
+    "cross_validation_average": 0.8181818181818182,
+    "training_records": 98,
+    "training_split_records": 73,
+    "validation_records": 25,
+    "correct_predictions": 25,
+    "misclassified_predictions": 0,
+    "labels": [
+        "attack_technique",
+        "phishing",
+        "vulnerability"
+    ],
+    "label_distribution": {
+        "vulnerability": 53,
+        "phishing": 25,
+        "attack_technique": 20
+    },
+    "label_origin_distribution": {
+        "authoritative_source": 98
+    },
+    "confusion_matrix": [
+        [
+            5,
+            0,
+            0
+        ],
+        [
+            0,
+            6,
+            0
+        ],
+        [
+            0,
+            0,
+            14
+        ]
+    ],
+    "per_class_metrics": {
+        "attack_technique": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 5,
+            "true_positives": 5,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "true_negatives": 20
+        },
+        "phishing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 6,
+            "true_positives": 6,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "true_negatives": 19
+        },
+        "vulnerability": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1_score": 1.0,
+            "support": 14,
+            "true_positives": 14,
+            "false_positives": 0,
+            "false_negatives": 0,
+            "true_negatives": 11
+        }
+    },
+    "model_results": [
+        {
+            "model_name": "Naive Bayes",
+            "accuracy": 0.84,
+            "macro_precision": 0.9259259259259259,
+            "macro_recall": 0.7333333333333334,
+            "macro_f1_score": 0.736111111111111,
+            "weighted_precision": 0.8755555555555555,
+            "weighted_recall": 0.84,
+            "weighted_f1_score": 0.7966666666666665,
+            "test_records": 25,
+            "correct_predictions": 21,
+            "misclassified_predictions": 4,
+            "confusion_matrix": [
+                [
+                    1,
+                    0,
+                    4
+                ],
+                [
+                    0,
+                    6,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    14
+                ]
+            ],
+            "per_class_metrics": {
+                "attack_technique": {
+                    "precision": 1.0,
+                    "recall": 0.2,
+                    "f1_score": 0.3333333333333333,
+                    "support": 5,
+                    "true_positives": 1,
+                    "false_positives": 0,
+                    "false_negatives": 4,
+                    "true_negatives": 20
+                },
+                "phishing": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 6,
+                    "true_positives": 6,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 19
+                },
+                "vulnerability": {
+                    "precision": 0.7777777777777778,
+                    "recall": 1.0,
+                    "f1_score": 0.875,
+                    "support": 14,
+                    "true_positives": 14,
+                    "false_positives": 4,
+                    "false_negatives": 0,
+                    "true_negatives": 7
+                }
+            },
+            "cross_validation_average": 0.8873106060606061,
+            "cross_validation_scores": [
+                0.9090909090909091,
+                0.9090909090909091,
+                0.84375
+            ],
+            "deployable_with_current_dashboard": true
+        },
+        {
+            "model_name": "Logistic Regression",
+            "accuracy": 1.0,
+            "macro_precision": 1.0,
+            "macro_recall": 1.0,
+            "macro_f1_score": 1.0,
+            "weighted_precision": 1.0,
+            "weighted_recall": 1.0,
+            "weighted_f1_score": 1.0,
+            "test_records": 25,
+            "correct_predictions": 25,
+            "misclassified_predictions": 0,
+            "confusion_matrix": [
+                [
+                    5,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    6,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    14
+                ]
+            ],
+            "per_class_metrics": {
+                "attack_technique": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 5,
+                    "true_positives": 5,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 20
+                },
+                "phishing": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 6,
+                    "true_positives": 6,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 19
+                },
+                "vulnerability": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 14,
+                    "true_positives": 14,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 11
+                }
+            },
+            "cross_validation_average": 0.8181818181818182,
+            "cross_validation_scores": [
+                0.45454545454545453,
+                1.0,
+                1.0
+            ],
+            "deployable_with_current_dashboard": true
+        },
+        {
+            "model_name": "Random Forest",
+            "accuracy": 1.0,
+            "macro_precision": 1.0,
+            "macro_recall": 1.0,
+            "macro_f1_score": 1.0,
+            "weighted_precision": 1.0,
+            "weighted_recall": 1.0,
+            "weighted_f1_score": 1.0,
+            "test_records": 25,
+            "correct_predictions": 25,
+            "misclassified_predictions": 0,
+            "confusion_matrix": [
+                [
+                    5,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    6,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    14
+                ]
+            ],
+            "per_class_metrics": {
+                "attack_technique": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 5,
+                    "true_positives": 5,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 20
+                },
+                "phishing": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 6,
+                    "true_positives": 6,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 19
+                },
+                "vulnerability": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 14,
+                    "true_positives": 14,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 11
+                }
+            },
+            "cross_validation_average": 0.9690656565656566,
+            "cross_validation_scores": [
+                0.9696969696969697,
+                1.0,
+                0.9375
+            ],
+            "deployable_with_current_dashboard": true
+        },
+        {
+            "model_name": "Linear SVM",
+            "accuracy": 1.0,
+            "macro_precision": 1.0,
+            "macro_recall": 1.0,
+            "macro_f1_score": 1.0,
+            "weighted_precision": 1.0,
+            "weighted_recall": 1.0,
+            "weighted_f1_score": 1.0,
+            "test_records": 25,
+            "correct_predictions": 25,
+            "misclassified_predictions": 0,
+            "confusion_matrix": [
+                [
+                    5,
+                    0,
+                    0
+                ],
+                [
+                    0,
+                    6,
+                    0
+                ],
+                [
+                    0,
+                    0,
+                    14
+                ]
+            ],
+            "per_class_metrics": {
+                "attack_technique": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 5,
+                    "true_positives": 5,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 20
+                },
+                "phishing": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 6,
+                    "true_positives": 6,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 19
+                },
+                "vulnerability": {
+                    "precision": 1.0,
+                    "recall": 1.0,
+                    "f1_score": 1.0,
+                    "support": 14,
+                    "true_positives": 14,
+                    "false_positives": 0,
+                    "false_negatives": 0,
+                    "true_negatives": 11
+                }
+            },
+            "cross_validation_average": 0.96875,
+            "cross_validation_scores": [
+                1.0,
+                1.0,
+                0.90625
+            ],
+            "deployable_with_current_dashboard": false
+        }
+    ],
+    "trained_at": "2026-08-27 13:35:51",
+    "evaluation_note": "This is a stronger source-labeled baseline evaluation. For the final formal capstone validation, preserve a separately reviewed holdout set that is not used during model selection or retraining."
+}

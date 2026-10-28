@@ -1,0 +1,25 @@
+{
+  "original_files_verified": 21,
+  "database_counts": {
+    "users": {
+      "before": 0,
+      "after": 0
+    },
+    "reports": {
+      "before": 0,
+      "after": 0
+    },
+    "email_scans": {
+      "before": 0,
+      "after": 0
+    },
+    "feed_runs": {
+      "before": 0,
+      "after": 0
+    },
+    "training_runs": {
+      "before": 0,
+      "after": 0
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "scope": "Small real-source functional verification, not a generalization or production accuracy claim",
+  "dataset": {
+    "filename": "data/processed/dataset_55b91c627ad6466aba113d829cb88364.csv",
+    "checksum": "325ac89f64aa1261849645cd2fe3b027527a0f46f5a57a3e7e1c1ac7db416f15",
+    "records": 80,
+    "classes": {
+      "legitimate": 40,
+      "phishing": 40
+    },
+    "sources": [
+      "Enron legitimate subset \u2014 Champa et al. curated corpus",
+      "Nazario phishing corpus \u2014 Champa et al. curated corpus"
+    ],
+    "created_at": "2026-10-01T16:19:05.130495+00:00",
+    "user": "acceptance-verifier"
+  },
+  "split": {
+    "id": "56b14b1bb5f84459b6d2079740a271ca",
+    "dataset": "data/processed/dataset_55b91c627ad6466aba113d829cb88364.csv",
+    "dataset_checksum": "325ac89f64aa1261849645cd2fe3b027527a0f46f5a57a3e7e1c1ac7db416f15",
+    "train": "data\\processed\\56b14b1bb5f84459b6d2079740a271ca\\training_set.csv",
+    "test": "data\\processed\\56b14b1bb5f84459b6d2079740a271ca\\testing_set.csv",
+    "train_checksum": "2bece354cf6c677689ee37ca3b12112b12b79b3e1f937a204e4e076f031aa7e5",
+    "test_checksum": "1d40fb7c53f1b1de5efe3b8b86b51f563e7621c1af94f74b66667467ef2a3d60",
+    "train_count": 64,
+    "test_count": 16,
+    "classes": {
+      "legitimate": 40,
+      "phishing": 40
+    },
+    "ratio": 0.2,
+    "actual_test_ratio": 0.2,
+    "grouped_shared_urls": false,
+    "seed": 42,
+    "created_at": "2026-10-01T16:19:05.249402+00:00"
+  },
+  "run_id": "2456a528782946298ae99de22320ce1d",
+  "models": [
+    {
+      "name": "Logistic Regression",
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "cv_macro_f1": 0.9529989334337161,
+      "training_seconds": 0.2943011999959708,
+      "deploy_unseen_prediction": "legitimate"
+    },
+    {
+      "name": "Naive Bayes",
+      "accuracy": 0.875,
+      "f1": 0.8888888888888888,
+      "false_positives": 2,
+      "false_negatives": 0,
+      "cv_macro_f1": 0.9689440993788819,
+      "training_seconds": 0.5761158999957843,
+      "deploy_unseen_prediction": "phishing"
+    },
+    {
+      "name": "Linear SVM",
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "cv_macro_f1": 0.9369806267975603,
+      "training_seconds": 0.5912196999997832,
+      "deploy_unseen_prediction": "legitimate"
+    },
+    {
+      "name": "Random Forest",
+      "accuracy": 0.8125,
+      "f1": 0.8,
+      "false_positives": 1,
+      "false_negatives": 2,
+      "cv_macro_f1": 0.8875948930296756,
+      "training_seconds": 1.612021899993124,
+      "deploy_unseen_prediction": "legitimate"
+    },
+    {
+      "name": "LSTM",
+      "accuracy": 0.625,
+      "f1": 0.625,
+      "false_positives": 3,
+      "false_negatives": 3,
+      "cv_macro_f1": 0.48601190476190476,
+      "training_seconds": 72.49090759999672,
+      "deploy_unseen_prediction": "legitimate"
+    },
+    {
+      "name": "BERT",
+      "accuracy": 0.875,
+      "f1": 0.875,
+      "false_positives": 1,
+      "false_negatives": 1,
+      "cv_macro_f1": 0.9054713804713804,
+      "training_seconds": 28.793451199999254,
+      "deploy_unseen_prediction": "legitimate"
+    },
+    {
+      "name": "CTI-BERT",
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "cv_macro_f1": 0.906614857301356,
+      "training_seconds": 113.33977500000037,
+      "deploy_unseen_prediction": "legitimate"
+    }
+  ]
+}

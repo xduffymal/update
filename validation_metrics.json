@@ -1,0 +1,86 @@
+{
+    "status": "completed",
+    "validation_status": "complete",
+    "evaluation_type": "independent_mixed_provenance_labeled_validation",
+    "evaluated_at": "2026-09-01 13:16:49",
+    "classes_evaluated": [
+        "attack_technique",
+        "phishing",
+        "vulnerability"
+    ],
+    "classes_missing": [],
+    "validation_records": 30,
+    "accuracy": 0.6666666666666666,
+    "precision": 0.45295055821371605,
+    "recall": 0.6666666666666666,
+    "f1_score": 0.5371360665478312,
+    "macro_precision": 0.4274322169059011,
+    "macro_recall": 0.6666666666666666,
+    "macro_f1_score": 0.5181224004753416,
+    "correct_predictions": 20,
+    "misclassified_predictions": 10,
+    "labels": [
+        "attack_technique",
+        "phishing",
+        "vulnerability"
+    ],
+    "confusion_matrix": [
+        [
+            6,
+            0,
+            0
+        ],
+        [
+            5,
+            0,
+            5
+        ],
+        [
+            0,
+            0,
+            14
+        ]
+    ],
+    "per_class_metrics": {
+        "attack_technique": {
+            "precision": 0.5454545454545454,
+            "recall": 1.0,
+            "f1_score": 0.7058823529411765,
+            "support": 6,
+            "true_positives": 6,
+            "false_positives": 5,
+            "false_negatives": 0,
+            "true_negatives": 19
+        },
+        "phishing": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1_score": 0.0,
+            "support": 10,
+            "true_positives": 0,
+            "false_positives": 0,
+            "false_negatives": 10,
+            "true_negatives": 20
+        },
+        "vulnerability": {
+            "precision": 0.7368421052631579,
+            "recall": 1.0,
+            "f1_score": 0.8484848484848485,
+            "support": 14,
+            "true_positives": 14,
+            "false_positives": 5,
+            "false_negatives": 0,
+            "true_negatives": 11
+        }
+    },
+    "class_distribution": {
+        "vulnerability": 14,
+        "phishing": 10,
+        "attack_technique": 6
+    },
+    "error_file": "validation_errors.csv",
+    "external_validation_source": "University of Twente / Zenodo phishing validation emails dataset",
+    "external_validation_doi": "10.5281/zenodo.13474746",
+    "holdout_policy": "Validation records are excluded from training, model selection, and retraining.",
+    "validation_note": "This evaluation uses independently reviewed vulnerability and attack-technique records plus distinct phishing examples from an external curated validation dataset. All validation records are held out from training and model selection."
+}
